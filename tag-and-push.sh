@@ -17,7 +17,7 @@ if [ $# -eq 1 ]
     git tag $1
   # d. push changes to remote with tags
     echo "Pushing commits and tags to branch $remote $current_branch"
-    git push -u $remote $current_branch
+    git push -u $remote $current_branch --tags
   else 
     echo "Wrong number of arguments supplied. You must only supply the name of the tag you wish to have moved to the current commit and pushed to the current branch on the remote repository."
 fi
