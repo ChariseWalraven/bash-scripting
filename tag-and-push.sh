@@ -13,10 +13,10 @@ if [ $# -eq 1 ]
     git tag -d $1
     echo -e "\e[33mTagging most recent commit on local branch with tag $1...\e[39m"
     git tag $1
-    echo -e "\e[32mDone.\e[39m"
+    echo -e "\e[34mDone tagging\e[39m"
     echo -e "\e[33mPushing commits and tags to branch $remote $current_branch...\e[39m"
     git push -u $remote $current_branch refs/tags/$1
-    echo -e "\e[1;34mFinished.\e[39m"
+    echo -e "\e[1;32mFinished.\e[39m"
   else 
     echo -e "\e[91mWrong number of arguments supplied. You must only supply the name of the tag you wish to have moved to the current commit and pushed to the current branch on the remote repository.\e[39m"
 fi
